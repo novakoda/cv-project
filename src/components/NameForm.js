@@ -8,7 +8,7 @@ class NameForm extends Component  {
       firstName: data.name.first,
       lastName: data.name.last,
     };
-    this.doChange = this.doChange.bind(this);
+    this.updateState = this.updateState.bind(this);
     this.changeName = this.changeName.bind(this);
   }
 
@@ -21,30 +21,36 @@ class NameForm extends Component  {
     // console.log('post ' + data.name.first, data.name.last + ' | ', this.state.firstName, this.state.lastName);
   }
 
-  doChange(e) {
+  updateState(e) {
     this.setState({ [e.target.id]: e.target.value });
   }
 
   render() {
     return (
       <form onSubmit={this.changeName}>
-        <label>First Name
-          <input
-            type="text"
-            id="firstName"
-            value={this.state.firstName}
-            onChange={this.doChange}
-          ></input>
-        </label>
-        <label>Last Name
-          <input
-            type="text"
-            id="lastName"
-            value={this.state.lastName}
-            onChange={this.doChange}
-          ></input>
-          <button>Change</button>
-        </label>
+        <div class="form-group">
+          <label>First Name
+            <input
+              type="text"
+              id="firstName"
+              value={this.state.firstName}
+              onChange={this.updateState}
+              className="form-control"
+            ></input>
+          </label>
+        </div>
+        <div class="form-group">
+          <label>Last Name
+            <input
+              type="text"
+              id="lastName"
+              value={this.state.lastName}
+              onChange={this.updateState}
+              className="form-control"
+            ></input>
+            <button class="btn btn-primary mt-3">Submit</button>
+          </label>
+        </div>
       </form>
     )
   }

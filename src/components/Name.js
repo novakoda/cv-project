@@ -9,7 +9,6 @@ class Name extends Component {
       nameEdit: false,
     };
     this.editName = this.editName.bind(this);
-
   }
 
   editName() {
@@ -18,17 +17,20 @@ class Name extends Component {
 
   render() {
     return (
-      <section>
+      <div>
         {
-          this.state.nameEdit ? (
-            <NameForm done={this.editName}/>
-          ) : (
-            <h1 onClick={this.editName}>{data.name.first + ' ' + data.name.last}</h1>
+          this.state.nameEdit ?
+            <NameForm done={this.editName}/> : (
+            <div class="name-cont">
+              <h1 style={{display: 'inline'}}>{data.name.first + ' ' + data.name.last}</h1>
+              <i
+                class="fas fa-edit"
+                onClick={this.editName}
+              ></i>
+            </div>
           )
         }
-        <h3>{data.name.first + ' ' + data.name.last}</h3>
-
-      </section>
+      </div>
     );
   }
 }

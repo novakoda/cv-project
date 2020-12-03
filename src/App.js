@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Name from './components/Name';
+import Info from './components/Info';
 
 class App extends Component {
   constructor() {
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Name />
+        <Info />
       </div>
     );
   }
