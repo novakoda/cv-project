@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import data from '../data';
 
-class ContactForm extends Component {
+class SocialForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: data.contact.email,
-      phone: data.contact.phone,
+      website: '',
+      userName: ''
     };
     this.updateState = this.updateState.bind(this);
-    this.changeContact = this.changeContact.bind(this);
+    this.addSocial = this.addSocial.bind(this);
   }
 
-  changeContact(e) {
+  addSocial(e) {
     e.preventDefault();
-    data.contact.email = this.state.email;
-    data.contact.phone = this.state.phone;
-    this.props.done;
+    if (this.state.website === '' || this.state.userName === '') return;
+    data.social.push({
+      id: data.social.length,
+      website: this.state.website,
+      userName: this.state.userName
+    });
+    this.props.done();
   }
 
   updateState(e) {
@@ -25,24 +29,26 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.changeContact}>
+      <form onSubmit={this.addSocial}>
         <div className="form-group">
-          <label>Email
+          <label>Website
             <input
-              type="email"
-              id="email"
-              value={this.state.email}
+              type="text"
+              id="website"
+              value={this.state.website}
+              placeholder="eg. Facebook"
               onChange={this.updateState}
               className="form-control"
             ></input>
           </label>
         </div>
         <div className="form-group">
-          <label>Phone Number
+          <label>Username
             <input
-              type="tel"
-              id="phone"
-              value={this.state.phone}
+              type="text"
+              id="userName"
+              value={this.state.userName}
+              placeholder="John Smith"
               onChange={this.updateState}
               className="form-control"
             ></input>
@@ -50,8 +56,10 @@ class ContactForm extends Component {
         </div>
         <button className="btn btn-primary mt-3">Submit</button>
       </form>
-    );
+    )
   }
+
+
 }
 
-export default ContactForm;
+export default SocialForm;

@@ -48,9 +48,9 @@ class NameForm extends Component  {
               onChange={this.updateState}
               className="form-control"
             ></input>
-            <button class="btn btn-primary mt-3">Submit</button>
           </label>
         </div>
+        <button className="btn btn-primary mt-3">Submit</button>
       </form>
     )
   }

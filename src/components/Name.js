@@ -21,10 +21,10 @@ class Name extends Component {
         {
           this.state.nameEdit ?
             <NameForm done={this.editName}/> : (
-            <div class="name-cont">
+            <div className="name-cont">
               <h1 style={{display: 'inline'}}>{data.name.first + ' ' + data.name.last}</h1>
               <i
-                class="fas fa-edit"
+                className="fas fa-edit"
                 onClick={this.editName}
               ></i>
             </div>

@@ -8,7 +8,12 @@ let data = {
     {
       id: 0,
       website: 'Instagram',
-      userName: '@igUsername',
+      userName: '@instaMe',
+    },
+    {
+      id: 1,
+      website: 'Twitter',
+      userName: '@tweetMe',
     },
   ]
 }

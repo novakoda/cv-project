@@ -21,7 +21,7 @@ class Contact extends Component {
       <div>
         <h2 style={{display: 'inline-block'}}>Contact</h2>
         <i
-          class="fas fa-edit"
+          className="fas fa-edit"
           onClick={this.editContact}
           style={{
             display: this.state.contactEdit ? 'none' : 'inline-block'
