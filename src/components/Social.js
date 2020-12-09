@@ -7,16 +7,14 @@ class Social extends Component {
     super(props);
     this.state = {
       socialEdit: false,
-      data: data.social
+      socials: data.social
     };
     this.editSocial = this.editSocial.bind(this);
     this.delSocial = this.delSocial.bind(this);
   }
 
   editSocial() {
-    this.setState({
-      socialEdit: !this.state.socialEdit
-    })
+    this.setState({ socialEdit: !this.state.socialEdit });
   }
 
   delSocial(e) {
@@ -24,11 +22,11 @@ class Social extends Component {
     data.social = data.social.map((soc, index) => {
       return { ...soc, id: index };
     });
-    this.setState({ data: data.social });
+    this.setState({ socials: data.social });
   }
 
   render() {
-    const socials = this.state.data.map((s) => {
+    const socials = this.state.socials.map((s) => {
       return (
         <div key={s.id}>
           <p><b>{s.website}: </b>{s.userName}</p>
@@ -53,7 +51,7 @@ class Social extends Component {
           }}
         ></i>
         { this.state.socialEdit && <SocialForm done={this.editSocial} /> }
-        { this.state.data && socials }
+        { this.state.socials && socials }
       </div>
     )
   }

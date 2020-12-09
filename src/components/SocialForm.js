@@ -36,7 +36,7 @@ class SocialForm extends Component {
               type="text"
               id="website"
               value={this.state.website}
-              placeholder="eg. Facebook"
+              placeholder="e.g. Facebook"
               onChange={this.updateState}
               className="form-control"
             ></input>

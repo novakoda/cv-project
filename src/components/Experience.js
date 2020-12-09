@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../data';
+import Jobs from './Jobs';
 
 
 class Experience extends Component {
@@ -14,7 +15,7 @@ class Experience extends Component {
   render() {
     return (
       <section>
-
+        <Jobs />
       </section>
     );
   }

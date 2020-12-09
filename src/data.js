@@ -15,6 +15,22 @@ let data = {
       website: 'Twitter',
       userName: '@tweetMe',
     },
+  ],
+  jobs: [
+    {
+      id: 0,
+      company: 'Maze Bank',
+      position: 'Bank Teller',
+      duties: 'Get money, count money, stack money, deposit money.',
+      date: '2016 - Current'
+    },
+    {
+      id: 1,
+      company: 'Nuka Cola',
+      position: 'Cola Salesman',
+      duties: 'Go door to door selling Nuka Cola products to potential customers.',
+      date: '2010 - 2016'
+    },
   ]
 }
 
