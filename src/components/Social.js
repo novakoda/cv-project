@@ -28,7 +28,7 @@ class Social extends Component {
   render() {
     const socials = this.state.socials.map((s) => {
       return (
-        <div key={s.id}>
+        <div key={s.id} className='item-icon'>
           <p><b>{s.website}: </b>{s.userName}</p>
           <i
             id={s.id}
@@ -46,9 +46,6 @@ class Social extends Component {
         <i
           className="fas fa-edit"
           onClick={this.editSocial}
-          style={{
-            display: this.state.socialEdit ? 'none' : 'inline-block'
-          }}
         ></i>
         { this.state.socialEdit && <SocialForm done={this.editSocial} /> }
         { this.state.socials && socials }

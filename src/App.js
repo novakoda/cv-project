@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Info from './components/Info';
 import Experience from './components/Experience';
+import './styles.css';
 
 class App extends Component {
   constructor() {
@@ -13,9 +14,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Info />
-        <Experience />
+      <div className="container">
+        <div className="page-border">
+          <Info />
+          <Experience />
+        </div>
       </div>
     );
   }

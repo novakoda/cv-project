@@ -23,9 +23,6 @@ class Contact extends Component {
         <i
           className="fas fa-edit"
           onClick={this.editContact}
-          style={{
-            display: this.state.contactEdit ? 'none' : 'inline-block'
-          }}
         ></i>
         {
           this.state.contactEdit ? <ContactForm done={this.editContact}/> : (

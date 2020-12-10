@@ -10,22 +10,31 @@ export default class School extends Component {
       schools: data.schools,
     }
     this.editSchool = this.editSchool.bind(this);
+    this.delSchool = this.delSchool.bind(this);
   }
 
   editSchool() {
     this.setState({ schoolEdit: !this.state.schoolEdit });
   }
 
+  delSchool(e) {
+    data.schools.splice(e.target.id, 1);
+    data.schools = data.schools.map((school, index) => {
+      return {...school, id: index};
+    });
+    this.setState({ schools: data.schools });
+  }
+
   render() {
     const schools = this.state.schools.map((s) => {
       return (
         <div key={s.id}>
-          <div>
+          <div className='item-icon'>
             <h4>{s.school}</h4>
             <i
               id={s.id}
-              style={{ display: this.state.jobEdit ? 'inline-block' : 'none' }}
-              onClick={this.delJob}
+              style={{ display: this.state.schoolEdit ? 'inline-block' : 'none' }}
+              onClick={this.delSchool}
               className="far fa-trash-alt"
             ></i>
           </div>
@@ -40,9 +49,6 @@ export default class School extends Component {
         <i
           className="fas fa-edit"
           onClick={this.editSchool}
-          style={{
-            display: this.state.schoolEdit ? 'none' : 'inline-block'
-          }}
         ></i>
         { this.state.schoolEdit && <SchoolForm done={this.editSchool} /> }
         { this.state.schools && schools }

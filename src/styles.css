@@ -1,0 +1,16 @@
+.page-border {
+  border: 3px solid black;
+  border-top: 10px solid black;
+  margin-top: 1em;
+  padding: 10px;
+  display: flex;
+}
+
+.xp {
+  border-left: 2px solid black;
+}
+
+.item-icon {
+  display: flex;
+  justify-content: space-between;
+}

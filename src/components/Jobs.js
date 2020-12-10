@@ -29,7 +29,7 @@ class Jobs extends Component {
     const jobs = this.state.jobs.map((j) => {
       return (
         <div key={j.id}>
-          <div>
+          <div className='item-icon'>
             <h4>{j.company}</h4>
             <i
               id={j.id}
@@ -51,9 +51,6 @@ class Jobs extends Component {
         <i
           className="fas fa-edit"
           onClick={this.editJobs}
-          style={{
-            display: this.state.jobEdit ? 'none' : 'inline-block'
-          }}
         ></i>
         { this.state.jobEdit && <JobForm done={this.editJobs} /> }
         { this.state.jobs && jobs }

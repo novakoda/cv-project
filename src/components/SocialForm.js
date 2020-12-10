@@ -54,7 +54,7 @@ class SocialForm extends Component {
             ></input>
           </label>
         </div>
-        <button className="btn btn-primary mt-3">Submit</button>
+        <button className="btn btn-primary mt-1">Submit</button>
       </form>
     )
   }

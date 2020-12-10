@@ -15,8 +15,9 @@ class Experience extends Component {
 
   render() {
     return (
-      <section>
+      <section className="xp ml-2 pl-2">
         <Jobs />
+        <hr style={{borderTop: '1px solid black'}}/>
         <School />
       </section>
     );
