@@ -31,7 +31,21 @@ let data = {
       duties: 'Go door to door selling Nuka Cola products to potential customers.',
       date: '2010 - 2016'
     },
-  ]
+  ],
+  schools: [
+    {
+      id: 0,
+      school: 'Hogwarts School of Witchcraft and Wizardry',
+      studies: 'Witchcraft and Wizardry',
+      date: '2004-2008',
+    },
+    {
+      id: 1,
+      school: 'Bel-Air High',
+      studies: 'Fresh Prince Principles',
+      date: '1995-1999',
+    },
+  ],
 }
 
 export default data

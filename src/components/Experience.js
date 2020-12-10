@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../data';
 import Jobs from './Jobs';
+import School from './School';
 
 
 class Experience extends Component {
@@ -16,6 +17,7 @@ class Experience extends Component {
     return (
       <section>
         <Jobs />
+        <School />
       </section>
     );
   }
