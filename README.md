@@ -1,4 +1,4 @@
-[Live demo](https://novakoda.github.io/cv-project/).
+# [Live demo](https://novakoda.github.io/cv-project/)
 
 This project was built using React, Webpack, & Bootstrap.
 
